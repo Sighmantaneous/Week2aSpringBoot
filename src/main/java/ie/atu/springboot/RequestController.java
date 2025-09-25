@@ -26,5 +26,10 @@ public class RequestController {
 
         return new Person("Simon", 55);
     }
+    @GetMapping("/calculate")
+    public Calculator calculatorJSON(@RequestParam double num1, @RequestParam double num2, @RequestParam String operation){
 
+
+
+    }
 }

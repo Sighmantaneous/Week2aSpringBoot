@@ -4,9 +4,9 @@ public class Calculator {
 
 
     private String operation;
-    private String result;
+    private double result;
 
-    public Calculator(String operation, String result) {
+    public Calculator(String operation, double result) {
         this.operation= operation;
         this.result = result;
     }
@@ -15,7 +15,7 @@ public class Calculator {
         return operation;
     }
 
-    public String getResult() {
+    public double getResult() {
         return result;
     }
 }
