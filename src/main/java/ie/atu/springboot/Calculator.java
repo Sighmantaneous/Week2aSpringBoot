@@ -10,6 +10,9 @@ public class Calculator {
         this.operation= operation;
         this.result = result;
     }
+    public Calculator(String Operation){
+        this.operation= Operation;
+    }
 
     public String getOperation() {
         return operation;

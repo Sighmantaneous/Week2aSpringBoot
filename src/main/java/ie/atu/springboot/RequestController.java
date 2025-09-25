@@ -29,6 +29,28 @@ public class RequestController {
     @GetMapping("/calculate")
     public Calculator calculatorJSON(@RequestParam double num1, @RequestParam double num2, @RequestParam String operation){
 
+        switch (operation){
+            case "add":
+                return new Calculator(operation, num1 + num2);
+
+            case "subtract":
+                return new Calculator(operation, num1 - num2);
+
+            case "multiply":
+                return new Calculator(operation, num1 * num2);
+
+            case "divide":
+                if(num2 == 0) {
+                    return new Calculator("Error");
+                }
+                else{
+                    return new Calculator(operation, num1 / num2);
+                }
+
+            default:
+                return new Calculator("Error");
+        }
+
 
 
     }
